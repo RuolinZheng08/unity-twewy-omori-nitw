@@ -7,6 +7,9 @@ public class ExplodeOnCollision : MonoBehaviour
     Animator animator;
     Rigidbody2D objectRb;
 
+    // allow some time for the swing animation to complete
+    float explodeAfterSeconds = 0.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +25,7 @@ public class ExplodeOnCollision : MonoBehaviour
     }
 
     IEnumerator PlayExplodeAnimation() {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(explodeAfterSeconds);
         animator.SetTrigger("Explode");
         objectRb.simulated = false;
     }

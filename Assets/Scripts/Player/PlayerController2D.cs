@@ -10,8 +10,6 @@ public class PlayerController2D : MonoBehaviour
     Rigidbody2D playerRb;
     Animator animator;
 
-    float horizontal;
-
     // read by ExplodeOnCollision.cs
     public bool isSwinging;
 
@@ -25,21 +23,22 @@ public class PlayerController2D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        Vector2 move = new Vector2(horizontal, 0);
-        animator.SetFloat("Speed", horizontal);
+        Move();
+        Swing();
+    }
 
-        // swing
+    void Move() {
+        float horizontal = Input.GetAxis("Horizontal");
+        animator.SetFloat("Speed", horizontal);
+        float moveBy = horizontal * speed;
+        playerRb.velocity = new Vector2(moveBy, playerRb.velocity.y);
+    }
+
+    void Swing() {
         if (Input.GetKeyDown(KeyCode.Space)) {
             animator.SetTrigger("Swing");
             isSwinging = true;
         }
-    }
-
-    void FixedUpdate() {
-        Vector2 position = playerRb.position;
-        position.x += speed * horizontal * Time.deltaTime;
-        playerRb.MovePosition(position);
     }
 
     void FinishSwinging() {
