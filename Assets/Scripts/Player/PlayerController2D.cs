@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class PlayerController2D : MonoBehaviour
 {
-    [Header("Movement")]
-    [SerializeField] float speed = 8.0f;
+    [SerializeField] float speed = 10.0f;
+
+    // read by ExplodeOnCollision.cs
+    public bool isSwinging = false;
 
     Rigidbody2D playerRb;
     Animator animator;
-
-    // read by ExplodeOnCollision.cs
-    public bool isSwinging;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +40,7 @@ public class PlayerController2D : MonoBehaviour
         }
     }
 
-    void FinishSwinging() {
+    void StopSwinging() {
         isSwinging = false;
     }
 }
