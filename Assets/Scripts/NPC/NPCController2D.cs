@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowPlayer : MonoBehaviour
+public class NPCController2D : MonoBehaviour
 {
     [SerializeField] float speed = 10.0f;
 
@@ -27,5 +27,10 @@ public class FollowPlayer : MonoBehaviour
         animator.SetFloat("Speed", horizontal);
         float moveBy = horizontal * speed;
         characterRb.velocity = new Vector2(moveBy, characterRb.velocity.y);
+    }
+
+    public void Death() {
+        animator.SetTrigger("Death");
+        characterRb.simulated = false;
     }
 }
