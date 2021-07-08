@@ -5,13 +5,15 @@ using UnityEngine;
 public class PlayerController2D : MonoBehaviour
 {
     [Header("Movement")]
-    [SerializeField] float speed = 3.0f;
+    [SerializeField] float speed = 8.0f;
 
-    private Rigidbody2D playerRb;
-    private Animator animator;
+    Rigidbody2D playerRb;
+    Animator animator;
 
-    private bool isSwinging;
-    private float horizontal;
+    float horizontal;
+
+    // read by ExplodeOnCollision.cs
+    public bool isSwinging;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,7 @@ public class PlayerController2D : MonoBehaviour
         // swing
         if (Input.GetKeyDown(KeyCode.Space)) {
             animator.SetTrigger("Swing");
+            isSwinging = true;
         }
     }
 
@@ -37,5 +40,9 @@ public class PlayerController2D : MonoBehaviour
         Vector2 position = playerRb.position;
         position.x += speed * horizontal * Time.deltaTime;
         playerRb.MovePosition(position);
+    }
+
+    void FinishSwinging() {
+        isSwinging = false;
     }
 }
