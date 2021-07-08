@@ -94,13 +94,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7956089927540659900}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8a1380b40a9f49e6a30efa3de67e6c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spriteShapeController: {fileID: 0}
-  index: 2
+  index: 0
   useNormals: 0
   runtimeUpdate: 0
   yOffset: 2.77
