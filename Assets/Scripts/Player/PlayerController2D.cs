@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class PlayerController2D : MonoBehaviour
 {
@@ -11,17 +12,22 @@ public class PlayerController2D : MonoBehaviour
 
     Rigidbody2D playerRb;
     Animator animator;
+    DialogueRunner dialogueRunner;
 
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        dialogueRunner = FindObjectOfType<DialogueRunner>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (dialogueRunner.IsDialogueRunning) {
+            return;
+        }
         Move();
         Swing();
     }

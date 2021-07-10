@@ -30,10 +30,12 @@ public class DialogueMover : MonoBehaviour
         // Get the dialogue line
         line = dialogueUI.GetLineText();
         // Search for the character who's talking
-        if (line.Contains(":"))
+        if (line.Contains(":")) {
             name = line.Substring(0, line.IndexOf(":"));
-        else
-            name = "Player";
+        } else {
+            name = "Narrator";
+        }
+
         // Search the GameObject of the character in the Scene
         character = GameObject.Find(name);
         // Sets the dialogue position
@@ -44,6 +46,7 @@ public class DialogueMover : MonoBehaviour
     {
         // Retrieve the position where the top part of the sprite is in the world
         float characterSpriteHeight = character.GetComponent<SpriteRenderer>().sprite.bounds.extents.y;
+        Debug.Log(characterSpriteHeight);
 
         // Create position with the sprite top location
         Vector3 characterPosition = new Vector3(character.transform.position.x,

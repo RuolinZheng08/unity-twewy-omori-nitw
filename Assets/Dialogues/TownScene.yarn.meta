@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: 50760f05e425145c6a389959d08a4043
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Start-Beat-0
+  - Start-Beat-1
+  - Start-ShikiAndRhyme-2
+  - Start-ShikiAndRhyme-3
+  - Start-ShikiAndRhyme-4
+  - Start-ShikiAndRhyme-5
+  - Start-ShikiAndRhyme-6
+  - Start-ShikiAndRhyme-7
+  - Start-ShikiAndRhyme-8
+  - Start-ShikiAndRhyme-9
+  - Start-ShikiAndRhyme-10
+  - Start-ShikiAndRhyme-11
+  - Start-ShikiAndRhyme-12
+  - Start-ShikiAndRhyme-13
+  - Start-ShikiAndRhyme-14
+  - Start-ShikiAndRhyme-15
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 50760f05e425145c6a389959d08a4043, type: 3}
+  localizations: []
