@@ -49,4 +49,8 @@ public class PlayerController2D : MonoBehaviour
     void StopSwinging() {
         isSwinging = false;
     }
+
+    public void SetAnimatorTalking(bool isTalking) {
+        animator.SetBool("Talking", isTalking);
+    }
 }

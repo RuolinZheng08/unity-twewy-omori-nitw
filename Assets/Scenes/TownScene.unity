@@ -247,7 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Beat
   talkToNode: Beat
-  scriptToLoad: {fileID: 2480198943629176163, guid: 50760f05e425145c6a389959d08a4043, type: 3}
+  scriptToLoad: {fileID: 0}
 --- !u!212 &87612920
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -749,7 +749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueContainer: {fileID: 1263624975}
-  textSpeed: 0.025
+  textSpeed: 0.05
   optionButtons:
   - {fileID: 219544452}
   - {fileID: 671093463}
@@ -774,9 +774,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 37324841}
+        m_TargetAssemblyTypeName: DialogueMover, Assembly-CSharp
+        m_MethodName: AnimateTalkingCharacter
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   onLineFinishDisplaying:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 37324841}
+        m_TargetAssemblyTypeName: DialogueMover, Assembly-CSharp
+        m_MethodName: AnimateTalkingCharacter
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onLineUpdate:
     m_PersistentCalls:
       m_Calls:
@@ -900,7 +924,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yarnScripts: []
+  yarnScripts:
+  - {fileID: 2480198943629176163, guid: 50760f05e425145c6a389959d08a4043, type: 3}
   textLanguage: 
   variableStorage: {fileID: 286450852}
   dialogueUI: {fileID: 286450853}

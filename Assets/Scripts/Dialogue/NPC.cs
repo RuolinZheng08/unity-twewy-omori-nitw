@@ -12,6 +12,8 @@ public class NPC : MonoBehaviour
     [Header("Optional")]
     public YarnProgram scriptToLoad;
 
+    Animator animator;
+
     void Start()
     {
         if (scriptToLoad != null)
@@ -19,5 +21,10 @@ public class NPC : MonoBehaviour
             Yarn.Unity.DialogueRunner dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
             dialogueRunner.Add(scriptToLoad);
         }
+        animator = GetComponent<Animator>();
+    }
+
+    public void SetAnimatorTalking(bool isTalking) {
+        animator.SetBool("Talking", isTalking);
     }
 }

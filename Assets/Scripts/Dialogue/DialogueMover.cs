@@ -55,4 +55,39 @@ public class DialogueMover : MonoBehaviour
         // Set the DialogueBubble position to the sprite top location in Screen Space
         this.transform.position = cam.WorldToScreenPoint(characterPosition);
     }
+
+    public void AnimateTalkingCharacter(bool isTalking) {
+        GameObject character;
+        string line, name;
+
+        // Get the dialogue line
+        line = dialogueUI.GetLineText();
+        // Search for the character who's talking
+        if (line.Contains(":")) {
+            name = line.Substring(0, line.IndexOf(":"));
+        } else {
+            name = "Narrator";
+        }
+
+        bool isPlayer;
+        if (name == "Player") {
+            isPlayer = true;
+        } else {
+            isPlayer = false;
+        }
+
+        // Search the GameObject of the character in the Scene
+        character = GameObject.Find(name);
+
+        // Sets the dialogue position
+        SetCharacterTalking(character, isPlayer, isTalking);
+    }
+
+    void SetCharacterTalking(GameObject character, bool isPlayer, bool isTalking) {
+        if (isPlayer) {
+            character.GetComponent<PlayerController2D>().SetAnimatorTalking(isTalking);
+        } else {
+            character.GetComponent<NPC>().SetAnimatorTalking(isTalking);
+        }
+    }
 }

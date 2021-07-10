@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 62788af24d1444de1810a44093cb3430
+guid: e407b641ee3734720beea933cf08037a
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -208,7 +208,7 @@ TextureImporter:
       name: talk_3
       rect:
         serializedVersion: 2
-        x: 1902
+        x: 1896
         y: 0
         width: 1902
         height: 1502
