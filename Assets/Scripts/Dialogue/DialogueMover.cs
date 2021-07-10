@@ -49,7 +49,7 @@ public class DialogueMover : MonoBehaviour
 
         // Create position with the sprite top location
         Vector3 characterPosition = new Vector3(character.transform.position.x,
-                                                characterSpriteHeight,
+                                                character.transform.position.y + characterSpriteHeight,
                                                 character.transform.position.z);
 
         // Set the DialogueBubble position to the sprite top location in Screen Space

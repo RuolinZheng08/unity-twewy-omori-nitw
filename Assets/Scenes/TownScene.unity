@@ -2070,7 +2070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Rhyme
   talkToNode: ShikiAndRhyme
-  scriptToLoad: {fileID: 2480198943629176163, guid: 50760f05e425145c6a389959d08a4043, type: 3}
+  scriptToLoad: {fileID: 0}
 --- !u!1 &939365642
 GameObject:
   m_ObjectHideFlags: 0
@@ -4056,7 +4056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Shiki
   talkToNode: ShikiAndRhyme
-  scriptToLoad: {fileID: 2480198943629176163, guid: 50760f05e425145c6a389959d08a4043, type: 3}
+  scriptToLoad: {fileID: 0}
 --- !u!1 &2123604077
 GameObject:
   m_ObjectHideFlags: 0

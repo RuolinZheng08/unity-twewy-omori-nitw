@@ -16,15 +16,13 @@ Rhyme: going bungee jumping this weekend.
 Shiki: But that's soooo scary!
 Shiki: Like the rope could break or you could get a heart attack.
 Shiki: Say Neku
-Shiki: aren't you scared of bungee jumping
-Shiki: and the possibility of dying from it?
+Shiki: aren't you scared of dying from bungee jumping?
 -> Yup
     Player: But there are things way scarier than
     Player: dying from bungee jumping.
     Shiki: Huh? Tell me about it.
 -> Nup
-    Shiki: Then tell me something scarier
-    Shiki: than dying from bungee jumping!
+    Shiki: Then tell me something scarier than that!
 
 Player: Like... not dying from bungee jumping.
 Player: And waking up the next day to deal with
