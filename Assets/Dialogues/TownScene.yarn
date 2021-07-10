@@ -11,18 +11,24 @@ tags:
 colorID: 8
 position: 10017,-528
 ---
-Rhyme: Shiki and I were just talking about going bungee jumping this weekend.
+Rhyme: Shiki and I were just talking about
+Rhyme: going bungee jumping this weekend.
 Shiki: But that's soooo scary!
-Shiki: Like the rope could break or you could get a heart attack...
-Shiki: Say Neku, aren't you scared of bungee jumping and the possibility of dying?
+Shiki: Like the rope could break or you could get a heart attack.
+Shiki: Say Neku
+Shiki: aren't you scared of bungee jumping
+Shiki: and the possibility of dying from it?
 -> Yup
-    Player: But there are things way scarier than dying from bungee jumping.
+    Player: But there are things way scarier than
+    Player: dying from bungee jumping.
     Shiki: Huh? Tell me about it.
 -> Nup
-    Shiki: Then tell me something scarier than dying from bungee jumping!
+    Shiki: Then tell me something scarier
+    Shiki: than dying from bungee jumping!
 
 Player: Like... not dying from bungee jumping.
-Player: And waking up the next day to deal with things and people that never change for the better.
+Player: And waking up the next day to deal with
+Player: things and people that never change for the better.
 Shiki: ...
 Rhyme: ...
 Rhyme: Let's maybe try something else this weekend.

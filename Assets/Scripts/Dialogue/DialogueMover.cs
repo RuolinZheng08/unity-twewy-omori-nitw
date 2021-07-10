@@ -33,7 +33,7 @@ public class DialogueMover : MonoBehaviour
         if (line.Contains(":")) {
             name = line.Substring(0, line.IndexOf(":"));
         } else {
-            name = "Narrator";
+            name = "Player";
         }
 
         // Search the GameObject of the character in the Scene
@@ -46,7 +46,6 @@ public class DialogueMover : MonoBehaviour
     {
         // Retrieve the position where the top part of the sprite is in the world
         float characterSpriteHeight = character.GetComponent<SpriteRenderer>().sprite.bounds.extents.y;
-        Debug.Log(characterSpriteHeight);
 
         // Create position with the sprite top location
         Vector3 characterPosition = new Vector3(character.transform.position.x,
