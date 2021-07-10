@@ -3,9 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
 
+public enum GroundType
+{
+    None,
+    Soft,
+    Hard
+}
+
 public class PlayerController2D : MonoBehaviour
 {
     [SerializeField] float speed = 10.0f;
+    [SerializeField] GroundType groundType;
 
     // read by ExplodeOnCollision.cs
     public bool isSwinging = false;
@@ -13,12 +21,14 @@ public class PlayerController2D : MonoBehaviour
     Rigidbody2D playerRb;
     Animator animator;
     DialogueRunner dialogueRunner;
+    PlayerAudio audioPlayer;
 
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioPlayer = GetComponent<PlayerAudio>();
         dialogueRunner = FindObjectOfType<DialogueRunner>();
     }
 
@@ -37,6 +47,7 @@ public class PlayerController2D : MonoBehaviour
         animator.SetFloat("Speed", horizontal);
         float moveBy = horizontal * speed;
         playerRb.velocity = new Vector2(moveBy, playerRb.velocity.y);
+        audioPlayer.PlaySteps(groundType, moveBy);
     }
 
     void Swing() {
