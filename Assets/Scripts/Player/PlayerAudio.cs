@@ -36,6 +36,14 @@ public class PlayerAudio : MonoBehaviour
         }
     }
 
+    public void PlayTalkingSound() {
+        // if (talkAudioSource.isPlaying) {
+        //     return;
+        // }
+        int index = Random.Range(0, talking.Length);
+        talkAudioSource.PlayOneShot(talking[index]);
+    }
+
     // public void PlayJump()
     // {
     //     jumpingAudioSource.PlayOneShot(jump);

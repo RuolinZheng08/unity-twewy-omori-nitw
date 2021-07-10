@@ -816,6 +816,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1601805268}
+        m_TargetAssemblyTypeName: PlayerAudio, Assembly-CSharp
+        m_MethodName: PlayTalkingSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onLineEnd:
     m_PersistentCalls:
       m_Calls: []
@@ -3221,7 +3233,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkAudioSource: {fileID: 2105222714}
   footstepsAudioSource: {fileID: 2001167878}
-  talking: []
+  talking:
+  - {fileID: 8300000, guid: 5bb6fa6df0c4c405fbd89b2a4c73752e, type: 3}
+  - {fileID: 8300000, guid: 5318c574de62843cb9a3c3cdd5de18f4, type: 3}
+  - {fileID: 8300000, guid: 004297bd251044d43aff18e5a45eb01a, type: 3}
+  - {fileID: 8300000, guid: f44fa7f142ec240b2b9a3ef90f6c40a4, type: 3}
+  - {fileID: 8300000, guid: 7a5a3fd906a634cf6a0f19b263353dc6, type: 3}
+  - {fileID: 8300000, guid: 987888f6c43f043c9982105c7397a384, type: 3}
   softSteps:
   - {fileID: 8300000, guid: 1b7cf8195904c7c4b8417d35e60f48c6, type: 3}
   - {fileID: 8300000, guid: 46147b6b60b4969448a7d4ee27fa38cb, type: 3}
@@ -3405,7 +3423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1700883275}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
