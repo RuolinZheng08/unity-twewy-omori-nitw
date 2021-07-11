@@ -616,6 +616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 263800441}
   - component: {fileID: 263800442}
+  - component: {fileID: 263800443}
   m_Layer: 0
   m_Name: Watermelon
   m_TagString: Untagged
@@ -630,8 +631,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 263800440}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.5, y: -4.2, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.367239, y: -2.7599998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1129003045}
@@ -678,17 +679,35 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8532703672136922592, guid: d4d714d62180d4f45ab1d60298c6496c, type: 3}
+  m_Sprite: {fileID: 8532703672136922592, guid: c03b1470fa60f49a8b6d05827f01a649, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.79, y: 3.2}
+  m_Size: {x: 7.2303233, y: 8.150001}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &263800443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263800440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a1380b40a9f49e6a30efa3de67e6c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteShapeController: {fileID: 541793012}
+  index: 4
+  useNormals: 0
+  runtimeUpdate: 0
+  yOffset: 3.44
+  localOffset: 0
 --- !u!1 &286450850
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,8 +835,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1601805268}
-        m_TargetAssemblyTypeName: PlayerAudio, Assembly-CSharp
+      - m_Target: {fileID: 37324841}
+        m_TargetAssemblyTypeName: DialogueMover, Assembly-CSharp
         m_MethodName: PlayTalkingSound
         m_Mode: 1
         m_Arguments:
@@ -3233,13 +3252,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talkAudioSource: {fileID: 2105222714}
   footstepsAudioSource: {fileID: 2001167878}
-  talking:
-  - {fileID: 8300000, guid: 5bb6fa6df0c4c405fbd89b2a4c73752e, type: 3}
-  - {fileID: 8300000, guid: 5318c574de62843cb9a3c3cdd5de18f4, type: 3}
-  - {fileID: 8300000, guid: 004297bd251044d43aff18e5a45eb01a, type: 3}
-  - {fileID: 8300000, guid: f44fa7f142ec240b2b9a3ef90f6c40a4, type: 3}
-  - {fileID: 8300000, guid: 7a5a3fd906a634cf6a0f19b263353dc6, type: 3}
-  - {fileID: 8300000, guid: 987888f6c43f043c9982105c7397a384, type: 3}
+  talkPlayer: {fileID: 8300000, guid: 4005097adf30e424dadac19482b811f2, type: 3}
+  talkNPC: {fileID: 8300000, guid: ca40ca49136e84968820465faa68f4a1, type: 3}
   softSteps:
   - {fileID: 8300000, guid: 1b7cf8195904c7c4b8417d35e60f48c6, type: 3}
   - {fileID: 8300000, guid: 46147b6b60b4969448a7d4ee27fa38cb, type: 3}
@@ -4514,7 +4528,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 4788851666231596322, guid: e7f5ceaee14054253b12bc5f6210bcb9, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -90,4 +90,33 @@ public class DialogueMover : MonoBehaviour
             character.GetComponent<NPC>().SetAnimatorTalking(isTalking);
         }
     }
+
+    public void PlayTalkingSound() {
+        string line, name;
+
+        // Get the dialogue line
+        line = dialogueUI.GetLineText();
+        // Search for the character who's talking
+        if (line.Contains(":")) {
+            name = line.Substring(0, line.IndexOf(":"));
+        } else {
+            name = "Narrator";
+        }
+
+        bool isPlayer;
+        if (name == "Player") {
+            isPlayer = true;
+        } else {
+            isPlayer = false;
+        }
+
+        PlayerAudio audioPlayer = FindObjectOfType<PlayerAudio>();
+        AudioClip clip;
+        if (isPlayer) {
+            clip = audioPlayer.talkPlayer;
+        } else {
+            clip = audioPlayer.talkNPC;
+        }
+        audioPlayer.talkAudioSource.PlayOneShot(clip);
+    }
 }

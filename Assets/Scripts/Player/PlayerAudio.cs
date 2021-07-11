@@ -2,12 +2,13 @@ using UnityEngine;
 
 public class PlayerAudio : MonoBehaviour
 {
-    [SerializeField] AudioSource talkAudioSource = null;
+    public AudioSource talkAudioSource = null;
     [SerializeField] AudioSource footstepsAudioSource = null;
     // [SerializeField] AudioSource jumpingAudioSource = null;
 
     [Header("Audio Clips")]
-    [SerializeField] AudioClip[] talking = null;
+    public AudioClip talkPlayer = null;
+    public AudioClip talkNPC = null;
     [SerializeField] AudioClip[] softSteps = null;
     [SerializeField] AudioClip[] hardSteps = null;
     // [SerializeField] AudioClip softLanding = null;
@@ -34,14 +35,6 @@ public class PlayerAudio : MonoBehaviour
 
             stepsTimer = 0;
         }
-    }
-
-    public void PlayTalkingSound() {
-        // if (talkAudioSource.isPlaying) {
-        //     return;
-        // }
-        int index = Random.Range(0, talking.Length);
-        talkAudioSource.PlayOneShot(talking[index]);
     }
 
     // public void PlayJump()
